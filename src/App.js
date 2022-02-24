@@ -1,20 +1,37 @@
 import './App.css';
 import React from 'react';
-import HeaderBlock from './components/HeaderBlock/header';
+import Header from './components/HeaderBlock/Header';
+import Layout from './components/LayoutBlock/layout';
+import Footer from './components/FooterBlock/Footer';
 
 
 
 const App = () => {
   return (
     <React.Fragment>
-      <HeaderBlock
-        descr='This is new description!'
+      <Header
+        title='My game'
+        desc='This is new description!'
       />
+      <Layout
+        title='Pokemon Game'
+        desc='This pokemon card game'
+        urlBg
+        colorBg
+      />
+      <Layout
+        title
+        desc
+        colorBg
+      />
+      <Layout
+        title
+        desc='It is what it is'
+        urlBg
+        colorBg
+      />
+      <Footer />
 
-      <HeaderBlock
-        title='My first Title'
-        hideBackground
-      />
     </React.Fragment>
   )
 };

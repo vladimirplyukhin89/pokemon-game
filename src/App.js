@@ -4,7 +4,7 @@ import Header from './components/HeaderBlock/Header';
 import Layout from './components/LayoutBlock/Layout';
 import Footer from './components/FooterBlock/Footer';
 
-import backgroundImage from './assets/bg3.jpg';
+//import backgroundImage from './assets/bg3.jpg';
 import Bg1IMG from './assets/bg1.jpg';
 import Bg3IMG from './assets/bg3.jpg';
 import PokemonCard from './components/PokemonCard/PokemonCard';
@@ -25,7 +25,7 @@ const POKEMONS = [
       "speed": 71
     },
     "type": "flying",
-    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official- artwork / 17.png",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png",
     "name": "pidgeotto",
     "base_experience": 122,
     "height": 11,
@@ -52,7 +52,7 @@ const POKEMONS = [
       "speed": 80
     },
     "type": "poison",
-    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official - artwork / 24.png",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/24.png",
     "name": "arbok",
     "base_experience": 157,
     "height": 35,
@@ -78,7 +78,7 @@ const POKEMONS = [
       "speed": 90
     },
     "type": "electric",
-    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official - artwork / 25.png",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
     "name": "pikachu",
     "base_experience": 112,
     "height": 4,
@@ -104,7 +104,7 @@ const POKEMONS = [
       "speed": 45
     },
     "type": "grass",
-    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official - artwork / 1.png",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
     "name": "bulbasaur",
     "base_experience": 64,
     "height": 7,
@@ -130,7 +130,7 @@ const POKEMONS = [
       "speed": 65
     },
     "type": "fire",
-    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official - artwork / 4.png",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
     "name": "charmander",
     "base_experience": 62,
     "height": 4,

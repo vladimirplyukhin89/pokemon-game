@@ -6,7 +6,7 @@ const Header = ({ title, desc: desc }) => {
             <div className={classes.forest}></div>
             <div className={classes.container}>
                 <h1>{title}</h1>
-                <p1 className={classes.paragraph}>{desc}</p1>
+                <p className={classes.paragraph}>{desc}</p>
             </div>
         </header>
     )

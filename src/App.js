@@ -180,7 +180,7 @@ const App = () => {
       >
         <div className='flex'>
           {
-            POKEMONS.map(item => <PokemonCard {...item} />)
+            POKEMONS.map(item => <PokemonCard key={item.id} {...item} />)
           }
         </div>
         {/*<img src={backgroundImage} alt='Second background' />*/}

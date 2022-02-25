@@ -1,11 +1,19 @@
 import classes from './pokemonCard.module.css';
-const backEndImage = '../../assets/card__backside.jpg';
+import backEndImage from '../../assets/card__backside.jpg';
+import { useState } from 'react';
 
 
 const PokemonCard = ({ name, type, img, id, values }) => {
+
+    const [isActive, setActive] = useState(false);
+
+    const handleClick = () => {
+        setActive(true);
+    };
+
     return (
-        <div className={classes.root}>
-            <div className={classes.polemonCard}>
+        <div className={classes.root} onClick={handleClick}>
+            <div className={`${classes.pokemonCard} ${isActive ? classes.active : ''}`}>
                 <div className={classes.cardFont}>
                     <div className={`${classes.wrap} ${classes.front}`}>
                         <div className={`${classes.pokemon} ${classes[type]}`}>
@@ -33,7 +41,7 @@ const PokemonCard = ({ name, type, img, id, values }) => {
 
                 <div className={classes.cardBack}>
                     <div className={`${classes.wrap} ${classes.back}`}>
-                        <img src={backEndImage} alt="Сard Backed" />
+                        <img src={backEndImage} alt="Сard Backend" />
                     </div>
                 </div>
 

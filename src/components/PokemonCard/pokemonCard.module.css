@@ -26,9 +26,10 @@
     transform-style: preserve-3d;
     transition: .6s .1s;
     transform: rotateY(180deg);
+    cursor: pointer;
 }
 
-.pokemonCard:hover {
+.pokemonCard.active {
     transform: rotateY(0deg);
 }
 
@@ -62,7 +63,7 @@
 }
 
 .wrap.front {
-    z-index: 2;
+    z-index: -1;
     padding: 10px;
 }
 
@@ -80,7 +81,7 @@
 }
 
 .wrap.back {
-    z-index: -1;
+    z-index: 2;
 }
 
 .cardBack {

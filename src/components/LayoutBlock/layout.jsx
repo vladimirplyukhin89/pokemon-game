@@ -3,12 +3,11 @@ import classes from './layout.module.css';
 
 const Layout = ({ title, urlBg, colorBg, children }) => {
     const sectionStyle = {};
-
     if (urlBg) {
-        sectionStyle.backgroundImage = `${urlBg}`;
+        sectionStyle.backgroundImage = `url(${urlBg})`;
     }
     if (colorBg) {
-        sectionStyle.backgroundColor = `${colorBg}`;
+        sectionStyle.backgroundColor = colorBg;
     }
     return (
         <section

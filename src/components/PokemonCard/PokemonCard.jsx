@@ -42,7 +42,7 @@ const PokemonCard = ({ name, type, img, id, values }) => {
 
                 <div className={classes.cardBack}>
                     <div className={cn(classes.wrap, classes.back)}>
-                        <img src={backEndImage} alt="Сard Backend" />
+                        <img src={backEndImage} alt="card Backend" />
                     </div>
                 </div>
 

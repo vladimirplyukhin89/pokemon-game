@@ -1,6 +1,5 @@
 import classes from './layout.module.css';
 
-
 const Layout = ({ title, urlBg, colorBg, children }) => {
     const sectionStyle = {};
     if (urlBg) {

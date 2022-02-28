@@ -4,11 +4,21 @@ import Menu from './Menu/Menu';
 import classes from './menu_header.module.css';
 import cn from 'classnames';
 
-const MenuHeader = () => {
+const MenuHeader = ({ bgActive }) => {
+    const [isOpen, setOpen] = useState(null);
+
+    const handleClickHamburg = () => {
+        setOpen(prevState => !prevState);
+    }
+
     return (
         <div>
-            <Menu />
-            <Navbar />
+            <Menu isOpen={isOpen} />
+            <Navbar
+                isOpen={isOpen}
+                bgActive={bgActive}
+                onClickHamburg={handleClickHamburg}
+            />
         </div>
     )
 }

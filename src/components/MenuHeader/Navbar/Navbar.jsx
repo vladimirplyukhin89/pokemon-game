@@ -1,20 +1,27 @@
 import classes from './navbar.module.css';
 import cn from 'classnames';
 
-const Navbar = () => {
+const Navbar = ({ isOpen, bgActive = false, onClickHamburg }) => {
     return (
-        <nav className={classes.root}>
+        <nav id={classes.navbar} className={cn({
+            [classes.bgActive]: bgActive
+        })}>
             <div className={classes.navWrapper}>
                 <p className={classes.brand}>
                     LOGO
                 </p>
-                <a className={cn(classes.menuButton, classes.active)}>
+                <div
+                    className={cn(classes.menuButton, {
+                        [classes.active]: isOpen
+                    })}
+                    onClick={onClickHamburg}
+                >
                     <span />
-                </a>
+                </div>
             </div>
         </nav>
-    )
-}
+    );
+};
 
 export default Navbar;
 

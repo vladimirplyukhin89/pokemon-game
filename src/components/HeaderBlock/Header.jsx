@@ -4,7 +4,6 @@ import cn from 'classnames';
 const Header = ({ title, desc: desc, onClickButton }) => {
     const handleClick = () => {
         onClickButton && onClickButton('game');
-        console.log('Header');
     }
 
     return (

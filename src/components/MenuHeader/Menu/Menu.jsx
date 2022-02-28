@@ -1,33 +1,44 @@
 import classes from './menu.module.css';
 import cn from 'classnames';
 
-const Menu = () => {
+const MENU = [
+    {
+        title: 'HOME',
+        to: '#welcome',
+    },
+    {
+        title: 'GAME',
+        to: 'game',
+    },
+    {
+        title: 'ABOUT',
+        to: 'about',
+    },
+    {
+        title: 'CONTACT',
+        to: 'contact',
+    }
+]
+
+const Menu = ({ isOpen }) => {
     return (
-        // "menuContainer active/deactive"
-        <div className={cn(classes.menuContainer, {})}>
+        <div className={cn(classes.menuContainer,
+            {
+                [classes.active]: isOpen === true,
+                [classes.deactive]: isOpen === false
+            })}>
             <div className={classes.overlay} />
             <div className={classes.menuItems}>
                 <ul>
-                    <li>
-                        {/*<a href={`#${welcome}`}>
-                            HOME
-                        </a>*/}
-                    </li>
-                    <li>
-                        {/*<a href={`#${game}`}>
-                            GAME
-                        </a>*/}
-                    </li>
-                    <li>
-                        {/*<a href={`#${about}`}>
-                            ABOUT
-                        </a>*/}
-                    </li>
-                    <li>
-                        {/*<a href={`#${contact}`}>
-                            CONTACT
-                        </a>*/}
-                    </li>
+                    {
+                        MENU.map(({ title, to }, index) => {
+                            <li key={index}>
+                                <a href={to}>
+                                    {title}
+                                </a>
+                            </li>
+                        })
+                    }
                 </ul>
             </div>
         </div>

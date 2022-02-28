@@ -5,7 +5,6 @@ import GameThing from './GameThing/GameThing';
 const GamePage = ({ onChangePage }) => {
     const handleClickButton = (page) => {
         onChangePage && onChangePage(page);
-        console.log('GamePage');
 
     }
 

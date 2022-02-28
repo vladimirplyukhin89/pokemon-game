@@ -6,7 +6,6 @@ const App = () => {
   const [page, setPage] = useState('app');
   const handleChangePage = (page) => {
     setPage(page);
-    console.log('App');
   }
 
   switch (page) {

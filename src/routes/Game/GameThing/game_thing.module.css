@@ -1,0 +1,10 @@
+.game {
+    position: relative;
+}
+
+.game__button {
+    position: absolute;
+    top: 8em;
+    left: 3%;
+    right: 0;
+}

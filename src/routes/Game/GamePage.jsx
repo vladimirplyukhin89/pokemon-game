@@ -1,21 +1,23 @@
-import cn from 'classnames';
 import React from 'react';
+import MenuHeader from '../../components/MenuHeader/MenuHeader';
 import GameThing from './GameThing/GameThing';
 
-const GamePage = ({ onChangePage }) => {
-    const handleClickButton = (page) => {
-        onChangePage && onChangePage(page);
 
+const GamePage = ({ onChangePage }) => {
+    const handleClickBtn = (page) => {
+        onChangePage && onChangePage(page);
+        console.log('GamePage');
     }
 
     return (
-        <React.Fragment>
+        <>
+            <MenuHeader />
             <GameThing
+                onClick={handleClickBtn}
                 title='Back to main page'
-                onClickButton={handleClickButton}
             />
-        </React.Fragment>
+        </>
     );
 };
 
-export default GamePage;
+export default GamePage; 

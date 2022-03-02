@@ -1,4 +1,4 @@
-.root {
+#navbar {
     position: fixed;
     z-index: 9999;
     width: 100%;
@@ -7,20 +7,20 @@
     justify-content: center;
 }
 
-.root.bgActive {
+#navbar.bgActive {
     background: #181d23;
 }
 
-.root .navWrapper {
+#navbar .navWrapper {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1400px;
-    padding: 0 2rem;
+    padding: 0 3rem;
 }
 
-.root .brand {
+#navbar .brand {
     font-size: 1.6rem;
     color: #fafafa;
     cursor: default;
@@ -72,7 +72,7 @@
 }
 
 .menuButton.active > span::before {
-    transform: rotate(-225deg);
+transform: rotate(-225deg);
     top: 0px;
 }
 

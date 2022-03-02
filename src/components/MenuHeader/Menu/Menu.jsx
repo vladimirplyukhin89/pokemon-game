@@ -8,36 +8,35 @@ const MENU = [
     },
     {
         title: 'GAME',
-        to: 'game',
+        to: '#game',
     },
     {
         title: 'ABOUT',
-        to: 'about',
+        to: '#about',
     },
     {
         title: 'CONTACT',
-        to: 'contact',
+        to: '#contact',
     }
 ]
 
 const Menu = ({ isOpen }) => {
     return (
-        <div className={cn(classes.menuContainer,
-            {
-                [classes.active]: isOpen === true,
-                [classes.deactive]: isOpen === false
-            })}>
+        <div className={cn(classes.menuContainer, {
+            [classes.active]: isOpen === true,
+            [classes.deactive]: isOpen === false
+        })}>
             <div className={classes.overlay} />
             <div className={classes.menuItems}>
                 <ul>
                     {
-                        MENU.map(({ title, to }, index) => {
+                        MENU.map(({ title, to }, index) => (
                             <li key={index}>
                                 <a href={to}>
                                     {title}
                                 </a>
                             </li>
-                        })
+                        ))
                     }
                 </ul>
             </div>

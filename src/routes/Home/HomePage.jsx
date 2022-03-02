@@ -154,12 +154,12 @@ const HomePage = ({ onChangePage }) => {
     }
 
     return (
-        <React.Fragment>
+        <>
             <MenuHeader />
             <Header
                 title='Pokemon game'
                 desc='This is Simple Triad Card Game'
-                onClickButton={handleClickButton}
+                onClick={handleClickButton}
             />
 
             <Layout
@@ -203,7 +203,7 @@ const HomePage = ({ onChangePage }) => {
             </Layout>
             <Footer />
 
-        </React.Fragment>
+        </>
     )
 };
 

@@ -13,7 +13,7 @@ const PokemonCard = ({ name, type, img, id, values }) => {
     };
 
     return (
-        <div className={classes.root} onClick={handleClick}>
+        <div className={classes.root} onClick={handleClick} >
             <div className={cn(classes.pokemonCard, { [classes.active]: isActive })}>
                 <div className={classes.cardFont}>
                     <div className={cn(classes.wrap, classes.front)}>

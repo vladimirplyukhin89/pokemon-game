@@ -15,7 +15,6 @@
     from {
         width: calc( 100vw - 120px );
     }
-
     to {
         width: 0;
     }
@@ -70,6 +69,10 @@
 .menuContainer.deactive {
     animation: fade-out 600ms forwards;
 }
+/*
+.linkItems.deactive {
+    animation: fade-out 600ms forwards;
+}*/
 
 @keyframes fade-out {
     0% {
@@ -89,6 +92,10 @@
 .menuContainer.active {
     animation: fade-in 300ms forwards;
 }
+
+/*.linkItems.active {
+    animation: fade-in 600ms forwards;
+}*/
 
 @keyframes fade-in {
     from {
@@ -126,6 +133,7 @@
 
 .menuContainer.active ul {
     animation: slide-in 300ms forwards 600ms;
+
 }
 
 @keyframes slide-in {
@@ -167,8 +175,11 @@
     color: #fafafa;
 }
 
-.menuContainer a:hover,
-.menuContainer a:active {
+.menuContainer a:hover {
+    color: #f300b4;
+}
+
+.menuContainer a.active {
     color: #f300b4;
 }
 

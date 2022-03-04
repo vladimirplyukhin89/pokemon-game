@@ -53,6 +53,54 @@
     }
 }
 
+.silhouette {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url('../../assets/Silhouette.svg') bottom left no-repeat;
+    width: 50%;
+    height: 50%;
+    opacity: 0;
+    animation: silhouette-move-in 1000ms 800ms forwards;
+}
+
+@keyframes silhouette-move-in {
+    from {
+        background-position-x: 0;
+    }
+    to {
+        opacity: 1;
+        background-position-x: 50%;
+    }
+}
+
+.moon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    position: fixed;
+    background: url('../../assets/Moon.svg') right 150% no-repeat;
+    background-size: 30% 30%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    animation: moon-move-in 1.2s 1s forwards;
+}
+
+@keyframes moon-move-in {
+    from {
+        opacity: 0;
+        background-position: right 150%;
+    }
+    to {
+        opacity: 1;
+        background-position: top right;
+    }
+}
+
+
 .container {
     width: fit-content;
     position: absolute;
@@ -146,4 +194,27 @@ button:disabled:hover {
     background: #f300b4;
     border: 1px solid transparent;
     color: #fafafa;
+}
+
+@media only screen and (max-width: 649px) {
+    .container {
+        right: 50%;
+        top: 10%;
+        width: 80%;
+        transform: translate(50%, 0);
+        animation: text-fade-in 1000ms 800ms forwards;
+    }
+    @keyframes text-fade-in {
+    from {
+        right: 0;
+        }
+    to {
+        opacity: 1;
+        right: 50%;
+        }
+    }
+
+    .silhouette {
+        width: 100%;
+    }
 }

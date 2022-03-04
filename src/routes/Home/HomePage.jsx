@@ -1,14 +1,11 @@
 import React from 'react';
 import Header from '../../components/HeaderBlock/Header';
 import Layout from '../../components/LayoutBlock/Layout';
-import Footer from '../../components/FooterBlock/Footer';
 import PokemonCard from '../../components/PokemonCard/PokemonCard';
-import Example from '../../components/Example/Example';
 
 import classes from './home_page.module.css';
 import Bg1IMG from '../../assets/bg1.jpg';
 import Bg3IMG from '../../assets/bg3.jpg';
-import MenuHeader from '../../components/MenuHeader/MenuHeader';
 
 const POKEMONS = [
     {
@@ -155,7 +152,6 @@ const HomePage = ({ onChangePage }) => {
 
     return (
         <>
-            <MenuHeader />
             <Header
                 title='Pokemon game'
                 desc='This is Simple Triad Card Game'
@@ -187,11 +183,11 @@ const HomePage = ({ onChangePage }) => {
                 title='Pokemon cards'
                 colorBg='#e2e2e2'
             >
-                <div className={classes.flex}>
+                {<div className={classes.flex}>
                     {
                         POKEMONS.map(item => <PokemonCard key={item.id} {...item} />)
                     }
-                </div>
+                </div>}
             </Layout>
 
             <Layout
@@ -199,9 +195,7 @@ const HomePage = ({ onChangePage }) => {
                 urlBg={Bg3IMG}
                 colorBg
             >
-                <Example />
             </Layout>
-            <Footer />
 
         </>
     )
